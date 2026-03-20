@@ -1,1331 +1,438 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrenamiento en Casa para Mujeres — Pack Completo + 4 Bonos | Músculo Lab</title>
-    <meta name="description" content="Guía completa de entrenamiento en casa para mujeres. Rutinas efectivas sin gimnasio, con progresión científica. Incluye 4 bonos exclusivos. Acceso inmediato.">
-    <link rel="icon" href="https://cdn.shopify.com/s/files/1/0783/4802/6611/files/favicon_musculolab.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-primary: #FF2D78;
-            --color-primary-dark: #D4195E;
-            --color-primary-glow: rgba(255, 45, 120, 0.25);
-            --color-bg: #0A0A0A;
-            --color-bg-card: #111111;
-            --color-bg-card-hover: #1A1A1A;
-            --color-text: #F5F5F5;
-            --color-text-muted: #A0A0A0;
-            --color-gold: #FFD700;
-            --color-gold-dark: #B8960C;
-            --color-red: #FF4444;
-            --color-green: #00D26A;
-            --color-border: #222222;
-            --font-main: 'Inter', -apple-system, sans-serif;
-            --font-accent: 'Playfair Display', Georgia, serif;
-            --max-width: 680px;
-            --radius: 12px;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        html { scroll-behavior: smooth; }
-        
-        body {
-            font-family: var(--font-main);
-            background: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        /* ========== UTILITY ========== */
-        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
-        .text-center { text-align: center; }
-        .text-primary { color: var(--color-primary); }
-        .text-gold { color: var(--color-gold); }
-        .text-muted { color: var(--color-text-muted); }
-        .text-green { color: var(--color-green); }
-        .text-red { color: var(--color-red); }
-        .fw-800 { font-weight: 800; }
-        .fw-900 { font-weight: 900; }
-        .uppercase { text-transform: uppercase; }
-        .line-through { text-decoration: line-through; }
-        .block { display: block; }
-
-        /* ========== TOP BAR ========== */
-        .top-bar {
-            background: var(--color-primary);
-            color: #fff;
-            text-align: center;
-            padding: 10px 16px;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-        .top-bar span { 
-            animation: pulse-text 2s ease-in-out infinite;
-        }
-        @keyframes pulse-text {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-
-        /* ========== TIMER ========== */
-        .timer-bar {
-            background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
-            border-bottom: 1px solid var(--color-border);
-            padding: 12px 16px;
-            text-align: center;
-        }
-        .timer-bar p {
-            font-size: 13px;
-            color: var(--color-text-muted);
-            margin-bottom: 6px;
-        }
-        .timer-digits {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            align-items: center;
-        }
-        .timer-block {
-            background: var(--color-bg-card);
-            border: 1px solid var(--color-border);
-            border-radius: 6px;
-            padding: 6px 10px;
-            min-width: 48px;
-            text-align: center;
-        }
-        .timer-block .num {
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--color-primary);
-            font-variant-numeric: tabular-nums;
-        }
-        .timer-block .label {
-            font-size: 9px;
-            text-transform: uppercase;
-            color: var(--color-text-muted);
-            letter-spacing: 1px;
-        }
-        .timer-sep {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--color-primary);
-            animation: blink 1s step-end infinite;
-        }
-        @keyframes blink { 50% { opacity: 0; } }
-
-        /* ========== HERO ========== */
-        .hero {
-            padding: 40px 0 32px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, var(--color-primary-glow) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
-        .hero > * { position: relative; z-index: 1; }
-        
-        .hero-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            color: #fff;
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            padding: 6px 16px;
-            border-radius: 50px;
-            margin-bottom: 16px;
-        }
-        
-        .hero h1 {
-            font-size: 28px;
-            font-weight: 900;
-            line-height: 1.15;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-        }
-        .hero h1 em {
-            font-style: italic;
-            font-family: var(--font-accent);
-            color: var(--color-primary);
-            display: block;
-            font-size: 32px;
-            text-transform: none;
-            letter-spacing: 0;
-        }
-        
-        .hero-sub {
-            font-size: 16px;
-            color: var(--color-text-muted);
-            max-width: 480px;
-            margin: 0 auto 24px;
-            line-height: 1.5;
-        }
-        .hero-sub strong { color: var(--color-text); }
-        
-        .hero-mockup {
-            max-width: 340px;
-            width: 100%;
-            margin: 0 auto 24px;
-            display: block;
-            filter: drop-shadow(0 20px 60px rgba(255, 45, 120, 0.15));
-        }
-        
-        .hero-includes {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 24px;
-        }
-        .hero-includes span {
-            background: var(--color-bg-card);
-            border: 1px solid var(--color-border);
-            padding: 6px 12px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--color-text-muted);
-        }
-        .hero-includes span::before {
-            content: '✓ ';
-            color: var(--color-green);
-            font-weight: 800;
-        }
-
-        /* ========== CTA BUTTON ========== */
-        .cta-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            color: #fff;
-            font-size: 16px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 16px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 24px var(--color-primary-glow);
-            width: 100%;
-            max-width: 420px;
-            text-align: center;
-        }
-        .cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 32px var(--color-primary-glow);
-        }
-        .cta-btn:active { transform: translateY(0); }
-        
-        .cta-price {
-            font-size: 13px;
-            color: var(--color-text-muted);
-            margin-top: 8px;
-        }
-        .cta-price .old-price {
-            text-decoration: line-through;
-            color: var(--color-red);
-            margin-right: 4px;
-        }
-        .cta-price .new-price {
-            color: var(--color-green);
-            font-weight: 700;
-        }
-
-        .cta-guarantee {
-            font-size: 12px;
-            color: var(--color-text-muted);
-            margin-top: 6px;
-        }
-        .cta-guarantee::before {
-            content: '🔒 ';
-        }
-
-        /* ========== SECTIONS ========== */
-        section { padding: 48px 0; }
-        
-        .section-divider {
-            width: 60px;
-            height: 3px;
-            background: var(--color-primary);
-            margin: 0 auto 20px;
-            border-radius: 3px;
-        }
-        
-        .section-title {
-            font-size: 22px;
-            font-weight: 900;
-            text-transform: uppercase;
-            text-align: center;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-        .section-title em {
-            font-family: var(--font-accent);
-            color: var(--color-primary);
-            font-style: italic;
-            text-transform: none;
-        }
-
-        /* ========== SOCIAL PROOF ========== */
-        .social-proof {
-            padding: 24px 0;
-            border-top: 1px solid var(--color-border);
-            border-bottom: 1px solid var(--color-border);
-        }
-        .proof-stats {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            flex-wrap: wrap;
-        }
-        .proof-stat {
-            text-align: center;
-        }
-        .proof-stat .num {
-            font-size: 28px;
-            font-weight: 900;
-            color: var(--color-primary);
-        }
-        .proof-stat .desc {
-            font-size: 12px;
-            color: var(--color-text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* ========== PREVIEW CAROUSEL ========== */
-        .carousel-section { padding: 32px 0; }
-        .carousel-track {
-            display: flex;
-            gap: 12px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            padding: 0 20px 16px;
-            scrollbar-width: none;
-        }
-        .carousel-track::-webkit-scrollbar { display: none; }
-        .carousel-track img {
-            scroll-snap-align: center;
-            width: 220px;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid var(--color-border);
-            flex-shrink: 0;
-        }
-        .carousel-hint {
-            text-align: center;
-            font-size: 12px;
-            color: var(--color-text-muted);
-            margin-top: 8px;
-        }
-
-        /* ========== PROBLEMA / SOLUCION ========== */
-        .problema {
-            background: linear-gradient(180deg, #0f0000 0%, var(--color-bg) 100%);
-        }
-        .problema-list {
-            list-style: none;
-            margin-bottom: 24px;
-        }
-        .problema-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255,68,68,0.15);
-            font-size: 15px;
-            color: #ccc;
-            padding-left: 28px;
-            position: relative;
-        }
-        .problema-list li::before {
-            content: '✗';
-            position: absolute;
-            left: 0;
-            color: var(--color-red);
-            font-weight: 800;
-            font-size: 16px;
-        }
-
-        .solucion-list {
-            list-style: none;
-            margin-top: 20px;
-        }
-        .solucion-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(0,210,106,0.15);
-            font-size: 15px;
-            color: #ccc;
-            padding-left: 28px;
-            position: relative;
-        }
-        .solucion-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--color-green);
-            font-weight: 800;
-            font-size: 16px;
-        }
-
-        /* ========== PARA QUIEN ========== */
-        .para-quien-card {
-            background: var(--color-bg-card);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius);
-            padding: 24px;
-            margin-bottom: 12px;
-        }
-        .para-quien-card h3 {
-            font-size: 15px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: var(--color-primary);
-        }
-        .para-quien-card ul {
-            list-style: none;
-        }
-        .para-quien-card ul li {
-            padding: 6px 0;
-            font-size: 14px;
-            color: #ccc;
-            padding-left: 24px;
-            position: relative;
-        }
-        .para-quien-card ul li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--color-primary);
-            font-weight: 700;
-        }
-
-        /* ========== CONTENIDO / CAPITULOS ========== */
-        .chapter-list { margin-top: 20px; }
-        .chapter {
-            background: var(--color-bg-card);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius);
-            margin-bottom: 8px;
-            overflow: hidden;
-            transition: border-color 0.3s;
-        }
-        .chapter:hover { border-color: #333; }
-        .chapter-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 20px;
-            cursor: pointer;
-            user-select: none;
-        }
-        .chapter-header h3 {
-            font-size: 14px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .chapter-num {
-            background: var(--color-primary);
-            color: #fff;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: 800;
-            flex-shrink: 0;
-        }
-        .chapter-arrow {
-            font-size: 18px;
-            color: var(--color-text-muted);
-            transition: transform 0.3s;
-        }
-        .chapter.open .chapter-arrow { transform: rotate(180deg); }
-        .chapter-body {
-            display: none;
-            padding: 0 20px 16px 58px;
-            font-size: 13px;
-            color: var(--color-text-muted);
-            line-height: 1.7;
-        }
-        .chapter.open .chapter-body { display: block; }
-        .chapter-pages {
-            display: inline-block;
-            background: rgba(255,45,120,0.1);
-            color: var(--color-primary);
-            font-size: 11px;
-            font-weight: 700;
-            padding: 2px 8px;
-            border-radius: 4px;
-            margin-top: 6px;
-        }
-
-        /* ========== BONOS ========== */
-        .bonos { background: linear-gradient(180deg, var(--color-bg) 0%, #0a0515 50%, var(--color-bg) 100%); }
-        .bonos-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
-            margin-top: 24px;
-        }
-        .bono-card {
-            display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 16px;
-            background: var(--color-bg-card);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius);
-            padding: 20px;
-            align-items: center;
-            transition: border-color 0.3s;
-        }
-        .bono-card:hover { border-color: var(--color-gold-dark); }
-        .bono-card img {
-            width: 100%;
-            max-height: 220px;
-            object-fit: contain;
-            border-radius: 6px;
-            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
-        }
-        .bono-info {}
-        .bono-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
-            color: #000;
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 3px 10px;
-            border-radius: 4px;
-            margin-bottom: 8px;
-        }
-        .bono-info h3 {
-            font-size: 15px;
-            font-weight: 800;
-            margin-bottom: 6px;
-            line-height: 1.3;
-        }
-        .bono-info p {
-            font-size: 13px;
-            color: var(--color-text-muted);
-            line-height: 1.5;
-            margin-bottom: 8px;
-        }
-        .bono-value {
-            font-size: 12px;
-            color: var(--color-text-muted);
-        }
-        .bono-value .val {
-            text-decoration: line-through;
-            color: var(--color-red);
-        }
-        .bono-value .free {
-            color: var(--color-green);
-            font-weight: 700;
-        }
-
-        /* ========== PRICING ========== */
-        .pricing {
-            background: linear-gradient(180deg, var(--color-bg) 0%, #110818 50%, var(--color-bg) 100%);
-        }
-        .pricing-card {
-            background: var(--color-bg-card);
-            border: 2px solid var(--color-primary);
-            border-radius: 16px;
-            padding: 32px 24px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .pricing-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-gold), var(--color-primary));
-        }
-        .pricing-ribbon {
-            background: var(--color-primary);
-            color: #fff;
-            font-size: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 6px 24px;
-            display: inline-block;
-            border-radius: 50px;
-            margin-bottom: 16px;
-        }
-        .pricing-includes {
-            text-align: left;
-            margin: 16px 0 24px;
-        }
-        .pricing-includes li {
-            list-style: none;
-            padding: 8px 0;
-            font-size: 14px;
-            border-bottom: 1px solid var(--color-border);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .pricing-includes li::before {
-            content: '📘';
-            font-size: 16px;
-            flex-shrink: 0;
-        }
-        .pricing-includes li:nth-child(n+2)::before { content: '🎁'; }
-        .pricing-includes li .pages {
-            margin-left: auto;
-            font-size: 11px;
-            color: var(--color-text-muted);
-            background: var(--color-bg);
-            padding: 2px 8px;
-            border-radius: 4px;
-        }
-        
-        .pricing-total {
-            font-size: 13px;
-            color: var(--color-text-muted);
-            margin-bottom: 4px;
-        }
-        .pricing-old {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--color-red);
-            text-decoration: line-through;
-            margin-bottom: 4px;
-        }
-        .pricing-arrow {
-            font-size: 20px;
-            margin: 4px 0;
-            color: var(--color-primary);
-        }
-        .pricing-new {
-            font-size: 48px;
-            font-weight: 900;
-            color: #fff;
-            line-height: 1;
-        }
-        .pricing-new sup {
-            font-size: 24px;
-            vertical-align: super;
-        }
-        .pricing-new .currency {
-            font-size: 20px;
-            color: var(--color-text-muted);
-        }
-        .pricing-note {
-            font-size: 12px;
-            color: var(--color-text-muted);
-            margin-top: 4px;
-            margin-bottom: 20px;
-        }
-
-        /* ========== GARANTIA ========== */
-        .garantia-box {
-            background: var(--color-bg-card);
-            border: 1px solid var(--color-gold-dark);
-            border-radius: var(--radius);
-            padding: 24px;
-            text-align: center;
-            margin-top: 32px;
-        }
-        .garantia-box h3 {
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--color-gold);
-            margin-bottom: 8px;
-        }
-        .garantia-box p {
-            font-size: 14px;
-            color: var(--color-text-muted);
-            line-height: 1.6;
-        }
-
-        /* ========== FAQ ========== */
-        .faq-item {
-            background: var(--color-bg-card);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius);
-            margin-bottom: 8px;
-            overflow: hidden;
-        }
-        .faq-question {
-            padding: 16px 20px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 14px;
-            font-weight: 700;
-            user-select: none;
-        }
-        .faq-question .arrow {
-            font-size: 18px;
-            color: var(--color-text-muted);
-            transition: transform 0.3s;
-        }
-        .faq-item.open .faq-question .arrow { transform: rotate(180deg); }
-        .faq-answer {
-            display: none;
-            padding: 0 20px 16px;
-            font-size: 14px;
-            color: var(--color-text-muted);
-            line-height: 1.6;
-        }
-        .faq-item.open .faq-answer { display: block; }
-
-        /* ========== FINAL CTA ========== */
-        .final-cta {
-            background: linear-gradient(180deg, var(--color-bg) 0%, #12040a 100%);
-            padding: 48px 0 120px;
-            text-align: center;
-        }
-        .final-cta h2 {
-            font-size: 24px;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-        .final-cta p {
-            font-size: 15px;
-            color: var(--color-text-muted);
-            margin-bottom: 24px;
-        }
-
-        /* ========== FOOTER ========== */
-        footer {
-            background: #050505;
-            border-top: 1px solid var(--color-border);
-            padding: 24px 0;
-            text-align: center;
-        }
-        footer p {
-            font-size: 12px;
-            color: #555;
-            line-height: 1.8;
-        }
-        footer a {
-            color: #666;
-            text-decoration: none;
-        }
-
-        /* ========== FLOATING CTA (MOBILE) ========== */
-        .floating-cta {
-            display: none;
-            position: fixed;
-            bottom: 0; left: 0; right: 0;
-            background: rgba(10,10,10,0.95);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid var(--color-border);
-            padding: 12px 16px;
-            z-index: 999;
-            text-align: center;
-        }
-        .floating-cta .cta-btn {
-            font-size: 14px;
-            padding: 14px 24px;
-            width: 100%;
-            max-width: 100%;
-        }
-
-        /* ========== WHATSAPP FLOAT ========== */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 80px;
-            right: 16px;
-            z-index: 998;
-            width: 52px;
-            height: 52px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 16px rgba(37,211,102,0.3);
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); }
-        .whatsapp-float svg { width: 28px; height: 28px; fill: #fff; }
-
-        /* ========== RESPONSIVE ========== */
-        @media (max-width: 640px) {
-            .hero h1 { font-size: 22px; }
-            .hero h1 em { font-size: 26px; }
-            .hero-mockup { max-width: 260px; }
-            .section-title { font-size: 19px; }
-            .bono-card { grid-template-columns: 120px 1fr; gap: 12px; padding: 16px; }
-            .bono-card img { max-height: 180px; }
-            .pricing-new { font-size: 40px; }
-            .proof-stats { gap: 20px; }
-            .floating-cta { display: block; }
-            .whatsapp-float { bottom: 76px; }
-            footer { padding-bottom: 80px; }
-        }
-
-        /* ========== ANIMATIONS ========== */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entrenamiento en Casa para Mujeres — Músculo Lab</title>
+<meta name="description" content="Guia completa de entrenamiento en casa para mujeres. 200 paginas, 3 niveles, 4 bonos. Acceso inmediato.">
+<link rel="icon" href="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/cbdad874-1cd7-4917-9d0c-869cca151e22_2.png?v=1771031902" type="image/png">
 </head>
-<body>
+<body style="margin:0;padding:0;">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Montserrat:wght@600;700;800;900&display=swap');
 
-    <!-- TOP BAR -->
-    <div class="top-bar">
-        <span>⚡ OFERTA POR TIEMPO LIMITADO — 87% DE DESCUENTO ⚡</span>
+  .shopify-section-header,.shopify-section-footer,.shopify-section-announcement-bar,header.header,footer.footer,.section-header,.section-footer,#shopify-section-header,#shopify-section-footer,#shopify-section-announcement-bar,.breadcrumbs,.breadcrumb,nav[aria-label="breadcrumb"]{display:none!important}
+  body,html{background:#0a0a0f!important}
+  main,.main-content,#MainContent,#main{padding:0!important;margin:0!important;max-width:100%!important}
+
+  :root{
+    --accent:#C04B6D;--accent-light:#E07090;--accent-dark:#9A3555;
+    --gold:#d4a853;--gold-light:#f0d48a;--gold-dark:#b8912e;
+    --bg-dark:#0a0a0f;--bg-card:#111118;--bg-card-hover:#16161f;
+    --text:#e8e8e8;--text-dim:#d5d5d5;--text-bright:#fff;
+    --border:rgba(192,75,109,0.15);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg-dark);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden}
+
+  .container{max-width:900px;margin:0 auto;padding:0 24px}
+  .section{padding:64px 0;position:relative}
+  .section-label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);text-align:center;margin-bottom:12px}
+  .section-title{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(28px,5vw,42px);text-align:center;color:var(--text-bright);margin-bottom:20px;line-height:1.15}
+  .section-title span{color:var(--accent)}
+  .section-subtitle{text-align:center;color:#ddd;font-size:16px;max-width:600px;margin:0 auto 48px}
+  .accent-line{width:60px;height:3px;background:linear-gradient(90deg,var(--accent-dark),var(--accent-light),var(--accent-dark));margin:0 auto 48px;border-radius:2px}
+
+  .announcement{background:linear-gradient(90deg,var(--accent-dark),var(--accent));text-align:center;padding:12px 16px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#fff;position:sticky;top:0;z-index:100;text-shadow:0 1px 3px rgba(0,0,0,0.3)}
+  .announcement .timer{display:inline-block;background:rgba(0,0,0,0.3);padding:2px 12px;border-radius:4px;margin-left:10px;font-variant-numeric:tabular-nums}
+
+  .hero{padding:48px 0 60px;text-align:center;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(192,75,109,0.06) 0%,transparent 70%);pointer-events:none}
+  .hero-brand{font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:var(--accent);margin-bottom:18px;opacity:0.8}
+  .hero-title{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(36px,7vw,62px);line-height:1.05;color:var(--text-bright);margin-bottom:8px}
+  .hero-title .highlight{display:block;background:linear-gradient(135deg,var(--accent-dark),var(--accent-light),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .hero-subtitle{font-size:18px;color:#ddd;margin-bottom:40px;max-width:560px;margin-left:auto;margin-right:auto}
+  .hero-mockup{max-width:340px;margin:0 auto 40px;filter:drop-shadow(0 20px 60px rgba(192,75,109,0.15))}
+  .hero-badges{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+  .hero-badge{display:flex;align-items:center;gap:8px;font-size:14px;color:#ddd}
+  .hero-badge .icon{width:20px;height:20px;background:rgba(192,75,109,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--accent)}
+
+  @keyframes ctaPulse{0%,100%{transform:scale(1);box-shadow:0 4px 24px rgba(212,168,83,0.3)}50%{transform:scale(1.04);box-shadow:0 8px 40px rgba(212,168,83,0.5)}}
+  @keyframes ctaShine{0%{left:-100%}100%{left:100%}}
+  .cta-btn{display:inline-block;background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold-light));color:#000;font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:18px 48px;border-radius:6px;transition:all 0.3s;box-shadow:0 4px 24px rgba(212,168,83,0.3);position:relative;overflow:hidden;animation:ctaPulse 2.5s ease-in-out infinite}
+  .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(212,168,83,0.4)}
+  .cta-btn::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);animation:ctaShine 3s ease-in-out infinite}
+  .cta-sub{display:block;text-align:center;margin-top:12px;font-size:13px;color:#ddd}
+  .cta-sub .secure{color:#4ade80}
+
+  .problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .problem-card{background:var(--bg-card);border:1px solid rgba(192,75,109,0.15);border-radius:12px;padding:28px}
+  .problem-card .icon{font-size:24px;margin-bottom:12px}
+  .problem-card h3{font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;color:var(--text-bright);margin-bottom:8px}
+  .problem-card p{font-size:15px;color:#ddd;line-height:1.6}
+
+  .benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+  .benefit-item{display:flex;gap:16px;align-items:flex-start;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:24px;transition:border-color 0.3s,transform 0.3s}
+  .benefit-item:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .benefit-icon{width:48px;height:48px;min-width:48px;background:linear-gradient(135deg,rgba(192,75,109,0.15),rgba(192,75,109,0.05));border:1px solid rgba(192,75,109,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px}
+  .benefit-text h3{font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;color:var(--text-bright);margin-bottom:4px}
+  .benefit-text p{font-size:14px;color:#ddd;line-height:1.6}
+
+  .carousel-wrapper{position:relative;overflow:hidden;max-width:100%}
+  .carousel-viewport{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;display:flex;gap:0;scroll-behavior:smooth;overscroll-behavior-x:contain}
+  .carousel-viewport::-webkit-scrollbar{display:none}
+  .carousel-slide{min-width:100%;max-width:100%;scroll-snap-align:center;scroll-snap-stop:always;flex-shrink:0;display:flex;justify-content:center;padding:0 20px;box-sizing:border-box}
+  .carousel-slide img{max-width:85%;width:100%;height:auto;border-radius:8px;border:1px solid var(--border);box-shadow:0 8px 32px rgba(0,0,0,0.3)}
+  .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(192,75,109,0.9);color:#fff;border:none;width:40px;height:40px;border-radius:50%;font-size:24px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.3s,transform 0.3s;box-shadow:0 4px 16px rgba(0,0,0,0.4)}
+  .carousel-btn:hover{background:var(--accent-light);transform:translateY(-50%) scale(1.1)}
+  .carousel-prev{left:8px}.carousel-next{right:8px}
+  .carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:16px}
+  .carousel-dot{width:8px;height:8px;border-radius:50%;background:rgba(192,75,109,0.3);border:none;cursor:pointer;transition:all 0.3s;padding:0}
+  .carousel-dot.active{background:var(--accent);transform:scale(1.3)}
+  @media(max-width:640px){.carousel-slide img{max-width:280px}.carousel-btn{width:32px;height:32px;font-size:18px}.carousel-slide{padding:0 10px}}
+
+  .content-grid{display:flex;flex-direction:column;gap:12px;max-width:700px;margin:0 auto}
+  .content-item{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.3s}
+  .content-item:hover{border-color:var(--accent)}
+  .content-header{padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:background 0.3s}
+  .content-header:hover{background:var(--bg-card-hover)}
+  .content-header-left{display:flex;align-items:center;gap:16px;flex:1}
+  .content-item .chapter{font-family:'Montserrat',sans-serif;font-weight:800;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--accent-dark),var(--accent));padding:4px 10px;border-radius:4px;white-space:nowrap}
+  .content-header-text h3{font-family:'Oswald',sans-serif;font-size:19px;font-weight:600;color:var(--text-bright);margin-bottom:2px}
+  .content-header-text p{font-size:13px;color:#ddd;margin:0}
+  .content-item .count{display:inline-block;background:rgba(192,75,109,0.1);border:1px solid rgba(192,75,109,0.2);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700;color:var(--accent);white-space:nowrap}
+  .content-toggle{color:var(--accent);font-size:22px;transition:transform 0.3s;flex-shrink:0}
+  .content-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+  .content-body-inner{padding:0 24px 24px;border-top:1px solid var(--border)}
+  .content-body-inner ul{list-style:none;padding:16px 0 0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 20px}
+  @media(max-width:640px){.content-body-inner ul{grid-template-columns:1fr}}
+  .content-body-inner li{font-size:13px;color:#ddd;padding:4px 0;display:flex;align-items:flex-start;gap:8px;line-height:1.4}
+  .content-body-inner li::before{content:'▸';color:var(--accent);font-size:11px;margin-top:2px;flex-shrink:0}
+  .content-item.active .content-toggle{transform:rotate(45deg)}
+  .content-item.active .content-body{max-height:600px}
+  .content-item.active{border-color:var(--accent)}
+
+  .bonus-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:36px;margin-bottom:24px;display:grid;grid-template-columns:180px 1fr;gap:32px;align-items:center;transition:border-color 0.3s,transform 0.3s}
+  .bonus-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  @media(max-width:640px){.bonus-card{grid-template-columns:1fr;text-align:center}}
+  .bonus-card img{max-height:280px;width:auto;max-width:100%;object-fit:contain;margin:0 auto;display:block;}
+  .bonus-tag{display:inline-block;background:linear-gradient(135deg,var(--accent-dark),var(--accent));color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:4px 14px;border-radius:4px;margin-bottom:12px}
+  .bonus-title{font-family:'Oswald',sans-serif;font-weight:700;font-size:26px;color:var(--text-bright);margin-bottom:8px}
+  .bonus-desc{font-size:15px;color:#ddd;margin-bottom:16px;line-height:1.6}
+  .bonus-price{font-family:'Barlow Condensed',sans-serif;font-size:18px}
+  .bonus-price .old{text-decoration:line-through;color:#d0d0d0;margin-right:8px}
+  .bonus-price .free{color:#4ade80;font-weight:800;font-size:20px;letter-spacing:1px}
+
+  .target-list{max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+  .target-item{display:flex;align-items:center;gap:16px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:20px 24px;transition:border-color 0.3s}
+  .target-item:hover{border-color:var(--accent)}
+  .target-check{width:32px;height:32px;min-width:32px;background:rgba(192,75,109,0.15);border:2px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:16px}
+  .target-text{font-size:16px;color:var(--text);line-height:1.5}
+
+  .pricing-section{background:linear-gradient(180deg,rgba(192,75,109,0.03) 0%,var(--bg-dark) 100%)}
+  .pricing-box{max-width:560px;margin:0 auto;background:var(--bg-card);border:2px solid var(--accent);border-radius:20px;overflow:hidden;box-shadow:0 0 80px rgba(192,75,109,0.08)}
+  .pricing-header{background:linear-gradient(135deg,var(--accent-dark),var(--accent));padding:20px;text-align:center}
+  .pricing-header h3{font-family:'Oswald',sans-serif;font-weight:700;font-size:22px;color:#fff;text-transform:uppercase;letter-spacing:2px}
+  .pricing-body{padding:40px 36px;text-align:center}
+  .pricing-items{text-align:left;margin-bottom:32px}
+  .pricing-item{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+  .pricing-item .name{font-size:15px;color:var(--text);display:flex;align-items:center;gap:10px}
+  .pricing-item .name .check{color:var(--accent);font-weight:700}
+  .pricing-item .name .tag{display:inline-block;font-size:9px;font-weight:800;font-family:'Montserrat',sans-serif;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:4px;vertical-align:middle}
+  .pricing-item .name .tag-principal{background:var(--accent);color:#fff}
+  .pricing-item .name .tag-bono{background:rgba(74,222,128,0.15);border:1px solid rgba(74,222,128,0.3);color:#4ade80}
+  .pricing-item .value-free{font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;color:#4ade80;letter-spacing:1px}
+  .pricing-item .value{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-decoration:line-through;color:var(--text-dim);font-size:15px}
+  .pricing-total{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-top:2px solid var(--border);margin-bottom:28px}
+  .pricing-total .label{font-family:'Oswald',sans-serif;font-weight:700;font-size:18px;color:var(--text-bright)}
+  .pricing-total .old-total{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;text-decoration:line-through;color:var(--accent)}
+  .pricing-savings{display:flex;justify-content:space-between;align-items:center;padding:8px 0 16px}
+  .pricing-savings .label{font-size:14px;color:#4ade80;font-weight:600}
+  .pricing-savings .amount{font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;color:#4ade80}
+  .pricing-now{margin-bottom:8px}
+  .pricing-now .label{font-size:16px;color:#ddd;margin-bottom:4px}
+  .pricing-now .price{font-family:'Oswald',sans-serif;font-weight:700;font-size:64px;line-height:1;background:linear-gradient(135deg,var(--gold-dark),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .pricing-now .price .currency{font-size:28px;vertical-align:super}
+  .pricing-guarantee{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.05)}
+  .guarantee-badge{width:56px;height:56px;background:linear-gradient(135deg,rgba(192,75,109,0.15),rgba(192,75,109,0.05));border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+  .guarantee-text{text-align:left;font-size:14px;color:#ddd;line-height:1.4}
+  .guarantee-text strong{color:var(--text-bright);display:block}
+  .pricing-trust{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05)}
+  .pricing-trust span{font-size:12px;color:var(--text-dim);display:flex;align-items:center;gap:5px}
+  .pricing-trust span em{font-style:normal;font-size:14px}
+
+  .faq-item{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden}
+  .faq-question{padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Oswald',sans-serif;font-weight:600;font-size:16px;color:var(--text-bright);transition:background 0.3s}
+  .faq-question:hover{background:var(--bg-card-hover)}
+  .faq-question .toggle{color:var(--accent);font-size:20px;transition:transform 0.3s}
+  .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+  .faq-answer-inner{padding:0 24px 20px;font-size:15px;color:#ddd;line-height:1.6}
+  .faq-item.active .faq-answer{max-height:200px}
+  .faq-item.active .toggle{transform:rotate(45deg)}
+
+  .about-box{max-width:700px;margin:0 auto;text-align:center}
+  .about-box p{font-size:15px;color:#ddd;line-height:1.7;margin-bottom:16px}
+  footer{text-align:center;padding:40px 24px;border-top:1px solid rgba(255,255,255,0.08);font-size:13px;color:#d0d0d0}
+  footer a{color:#d0d0d0;text-decoration:none;transition:color 0.3s}
+  footer a:hover{color:var(--accent)}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);max-width:400px;margin:0 auto}
+
+  .whatsapp-float{position:fixed;bottom:100px;right:20px;z-index:98;display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;opacity:0;transform:scale(0.5);pointer-events:none;transition:opacity 0.4s,transform 0.4s}
+  .whatsapp-float.visible{opacity:1;transform:scale(1);pointer-events:auto}
+  .whatsapp-float .wa-icon{width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.3s,box-shadow 0.3s}
+  .whatsapp-float:hover .wa-icon{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5)}
+  .whatsapp-float .wa-label{background:#25D366;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;padding:3px 8px;border-radius:10px;white-space:nowrap}
+  .whatsapp-float svg{width:30px;height:30px;fill:#fff}
+
+  .floating-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);padding:12px 20px;z-index:99;border-top:1px solid var(--border);text-align:center}
+  .floating-cta .cta-btn{width:100%;padding:14px;font-size:15px;animation:none}
+
+  @media(max-width:768px){
+    .floating-cta{display:block}.section{padding:48px 0}.hero{padding:32px 0 28px}.bonus-card{grid-template-columns:1fr}.pricing-body{padding:28px 20px}.pricing-now .price{font-size:48px}footer{padding-bottom:80px}
+    .hero-brand{margin-bottom:16px;font-size:13px}.hero-subtitle{margin-bottom:28px;font-size:16px}.hero-mockup{max-width:260px;margin-bottom:28px}.hero-badges{margin-bottom:28px;gap:12px}.accent-line{margin-bottom:32px}.section-subtitle{margin-bottom:32px}
+    .section-label{font-size:14px;letter-spacing:3px}.section-title{font-size:clamp(26px,6vw,36px);margin-bottom:16px}
+    .problem-card h3{font-size:19px}.problem-card p{font-size:15px}.problem-card{padding:24px}
+    .benefit-text h3{font-size:18px}.benefit-text p{font-size:14px}
+    .content-item h3{font-size:19px}.content-item p{font-size:14px}.content-item .chapter{font-size:12px}
+    .bonus-title{font-size:24px}.bonus-desc{font-size:15px}.bonus-card img{max-height:280px;width:auto;max-width:100%;object-fit:contain;margin:0 auto;display:block;}
+  .bonus-tag{font-size:13px}.bonus-price{font-size:18px}.bonus-price .free{font-size:22px}
+    .pricing-item .name{font-size:14px}.pricing-item .value{font-size:14px}
+    .faq-question{font-size:17px;padding:18px 20px}.faq-answer-inner{font-size:15px}
+    .about-box p{font-size:15px}
+    .content-header{padding:16px 18px;flex-wrap:wrap}.content-header-left{gap:10px;flex-direction:column;align-items:flex-start;min-width:0}.content-header-text h3{font-size:18px}.content-item .chapter{font-size:9px;padding:3px 8px}.content-item .count{font-size:11px;padding:2px 10px}.content-body-inner{padding:0 18px 20px}.content-body-inner li{font-size:13px}
+    .announcement{font-size:11px;padding:10px 12px;letter-spacing:1px}
+    .cta-btn{font-size:17px;padding:16px 36px}
+    .target-text{font-size:15px}
+  }
+</style>
+
+<div class="announcement">🔥 87% OFF — ESTE PRECIO SE VA CUANDO EL TIMER LLEGUE A CERO — <span class="timer" id="countdown">--:--:--</span></div>
+
+<section class="hero">
+  <div class="container">
+    <img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/cbdad874-1cd7-4917-9d0c-869cca151e22_2.png?v=1771031902" alt="Músculo Lab" style="width:80px;height:80px;margin:0 auto 16px;display:block;border-radius:50%;">
+    <div class="hero-brand">MÚSCULO LAB PRESENTA</div>
+    <h1 class="hero-title">DEJÁ DE BUSCAR RUTINAS EN INSTAGRAM<span class="highlight">EMPEZÁ A ENTRENAR CON UN SISTEMA QUE FUNCIONA</span></h1>
+    <p class="hero-subtitle">200 páginas con 3 niveles de entrenamiento en casa (principiante, intermedia, avanzada), rutinas de 8 semanas, capítulos especiales de glúteos, abdomen, cardio y 4 bonos. Todo sin gym, sin equipamiento caro.</p>
+    <div class="hero-mockup">
+      <!-- REEMPLAZAR: mockup 3D del ebook principal -->
+      <img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_v5_entrena_fix.png?v=1773808483" alt="Entrenamiento en Casa para Mujeres - Ebook Músculo Lab" style="width:100%;height:auto;border-radius:8px;">
     </div>
-
-    <!-- TIMER -->
-    <div class="timer-bar">
-        <p>Esta oferta se termina en:</p>
-        <div class="timer-digits">
-            <div class="timer-block"><div class="num" id="timer-h">02</div><div class="label">Hrs</div></div>
-            <span class="timer-sep">:</span>
-            <div class="timer-block"><div class="num" id="timer-m">00</div><div class="label">Min</div></div>
-            <span class="timer-sep">:</span>
-            <div class="timer-block"><div class="num" id="timer-s">00</div><div class="label">Seg</div></div>
-        </div>
+    <div class="hero-badges">
+      <div class="hero-badge"><span class="icon">✓</span> 200 páginas</div>
+      <div class="hero-badge"><span class="icon">✓</span> 3 niveles de dificultad</div>
+      <div class="hero-badge"><span class="icon">✓</span> 4 Bonos incluidos</div>
+      <div class="hero-badge"><span class="icon">✓</span> Acceso inmediato</div>
     </div>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-badge">Nuevo lanzamiento 2026</div>
-            <h1>
-                Entrena en casa
-                <em>sin gimnasio, sin excusas</em>
-            </h1>
-            <p class="hero-sub">
-                La guía completa para mujeres que quieren <strong>transformar su cuerpo desde casa</strong> con rutinas efectivas, progresión real y sin necesidad de equipamiento costoso.
-            </p>
-
-            <!-- MOCKUP PRINCIPAL -->
-            <!-- REEMPLAZAR con URL del mockup principal subido a Shopify Files o Hotmart -->
-            <img src="MOCKUP_PRINCIPAL_URL" alt="Entrenamiento en Casa para Mujeres — Músculo Lab" class="hero-mockup" onerror="this.style.display='none'">
-
-            <div class="hero-includes">
-                <span>Ebook principal</span>
-                <span>4 bonos gratis</span>
-                <span>Acceso inmediato</span>
-                <span>De por vida</span>
-            </div>
-
-            <a href="https://pay.hotmart.com/B104990340O?checkoutMode=10" class="cta-btn">
-                QUIERO MI GUÍA AHORA — $9 USD
-            </a>
-            <div class="cta-price">
-                <span class="old-price">$69 USD</span>
-                <span class="new-price">$9 USD</span> — Precio de lanzamiento
-            </div>
-            <div class="cta-guarantee">Acceso inmediato · Pago 100% seguro · Garantía 7 días</div>
-        </div>
-    </section>
-
-    <!-- SOCIAL PROOF -->
-    <div class="social-proof">
-        <div class="container">
-            <div class="proof-stats">
-                <div class="proof-stat">
-                    <div class="num">12,500+</div>
-                    <div class="desc">Clientas satisfechas</div>
-                </div>
-                <div class="proof-stat">
-                    <div class="num">4.9 ★</div>
-                    <div class="desc">Calificación promedio</div>
-                </div>
-                <div class="proof-stat">
-                    <div class="num">5</div>
-                    <div class="desc">Ebooks incluidos</div>
-                </div>
-            </div>
-        </div>
+    <a href="https://pay.hotmart.com/B104990340O?checkoutMode=10" class="cta-btn">QUIERO EMPEZAR AHORA — $9 USD</a>
+    <span class="cta-sub"><span class="secure">🔒</span> Pago 100% seguro · Acceso inmediato</span>
+  </div>
+  <div style="margin-top:48px;">
+    <p style="text-align:center;font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">MIRÁ LO QUE HAY ADENTRO</p>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-prev" onclick="ebookCarousel(-1)">‹</button>
+      <div class="carousel-viewport" id="ebookViewport">
+        <div class="carousel-slide"><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_prev_v3_01.jpg?v=1773809699" alt="Vista previa 1"></div>
+        <div class="carousel-slide"><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_prev_v3_02.jpg?v=1773809707" alt="Vista previa 2"></div>
+        <div class="carousel-slide"><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_prev_v3_03.jpg?v=1773809714" alt="Vista previa 3"></div>
+        <div class="carousel-slide"><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_prev_v3_04.jpg?v=1773809721" alt="Vista previa 4"></div>
+        <div class="carousel-slide"><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_prev_v3_05.jpg?v=1773809728" alt="Vista previa 5"></div>
+        <div class="carousel-slide"><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_prev_v3_06.jpg?v=1773809735" alt="Vista previa 6"></div>
+        <div class="carousel-slide"><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_prev_v3_07.jpg?v=1773809742" alt="Vista previa 7"></div>
+        <div class="carousel-slide"><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_prev_v3_08.jpg?v=1773809749" alt="Vista previa 8"></div>
+        <div class="carousel-slide"><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_prev_v3_09.jpg?v=1773809756" alt="Vista previa 9"></div>
+        <div class="carousel-slide"><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_prev_v3_10.jpg?v=1773809764" alt="Vista previa 10"></div>
+        <div class="carousel-slide"><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_prev_v3_11.jpg?v=1773809771" alt="Vista previa 11"></div>
+        <div class="carousel-slide"><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_prev_v3_12.jpg?v=1773809778" alt="Vista previa 12"></div>
+      </div>
+      <button class="carousel-btn carousel-next" onclick="ebookCarousel(1)">›</button>
+      <div class="carousel-dots" id="ebookDots"></div>
     </div>
+  </div>
+</section>
 
-    <!-- PREVIEW CAROUSEL -->
-    <section class="carousel-section">
-        <div class="container text-center">
-            <p class="text-muted" style="font-size:13px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;">Mira lo que hay dentro</p>
-        </div>
-        <div class="carousel-track">
-            <!-- REEMPLAZAR con URLs de preview pages subidas a Shopify Files -->
-            <img src="PREVIEW_01_URL" alt="Preview 1" onerror="this.style.display='none'">
-            <img src="PREVIEW_02_URL" alt="Preview 2" onerror="this.style.display='none'">
-            <img src="PREVIEW_03_URL" alt="Preview 3" onerror="this.style.display='none'">
-            <img src="PREVIEW_04_URL" alt="Preview 4" onerror="this.style.display='none'">
-            <img src="PREVIEW_05_URL" alt="Preview 5" onerror="this.style.display='none'">
-            <img src="PREVIEW_06_URL" alt="Preview 6" onerror="this.style.display='none'">
-            <img src="PREVIEW_07_URL" alt="Preview 7" onerror="this.style.display='none'">
-            <img src="PREVIEW_08_URL" alt="Preview 8" onerror="this.style.display='none'">
-            <img src="PREVIEW_09_URL" alt="Preview 9" onerror="this.style.display='none'">
-            <img src="PREVIEW_10_URL" alt="Preview 10" onerror="this.style.display='none'">
-        </div>
-        <p class="carousel-hint">← Desliza para ver más páginas →</p>
-    </section>
+<div class="divider"></div>
 
-    <!-- PROBLEMA -->
-    <section class="problema fade-in">
-        <div class="container">
-            <div class="section-divider"></div>
-            <h2 class="section-title">¿Te identificas <em>con esto?</em></h2>
-            <ul class="problema-list">
-                <li>Quieres entrenar pero no tienes tiempo (ni ganas) de ir al gimnasio</li>
-                <li>Buscas rutinas en YouTube pero no sabes si son efectivas o seguras</li>
-                <li>Empiezas motivada y a las 2 semanas abandonas porque no ves resultados</li>
-                <li>No sabes cuántas series, repeticiones o descanso necesitas</li>
-                <li>Sientes que las rutinas "de casa" son para principiantes y no funcionan de verdad</li>
-                <li>Compraste bandas o mancuernas y juntan polvo porque no tienes un plan</li>
-            </ul>
-            
-            <h2 class="section-title" style="margin-top:32px;">Ahora imagina <em>esto:</em></h2>
-            <ul class="solucion-list">
-                <li>Rutinas progresivas diseñadas para tu nivel — desde principiante hasta avanzada</li>
-                <li>Cada ejercicio con técnica explicada paso a paso e ilustraciones claras</li>
-                <li>Planes semanales armados para que solo tengas que abrir y entrenar</li>
-                <li>Resultados reales sin salir de tu casa ni gastar en membresías</li>
-                <li>Enfoque en glúteos, abdomen, piernas y tren superior — cuerpo completo</li>
-                <li>Progresión científica para que cada semana sea mejor que la anterior</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- PARA QUIEN ES -->
-    <section class="fade-in">
-        <div class="container">
-            <div class="section-divider"></div>
-            <h2 class="section-title">¿Para quién <em>es esta guía?</em></h2>
-            
-            <div class="para-quien-card">
-                <h3>✨ Es para ti si:</h3>
-                <ul>
-                    <li>Quieres entrenar en casa con un plan profesional y progresivo</li>
-                    <li>Eres principiante o intermedia y buscas estructura</li>
-                    <li>No tienes tiempo para el gimnasio pero sí quieres cambiar tu cuerpo</li>
-                    <li>Quieres enfocarte en glúteos, abdomen y tonificación general</li>
-                    <li>Buscas algo que puedas hacer con equipamiento mínimo o sin él</li>
-                </ul>
-            </div>
-            <div class="para-quien-card">
-                <h3>🚫 No es para ti si:</h3>
-                <ul>
-                    <li>Buscas un plan genérico de internet sin ciencia detrás</li>
-                    <li>No estás dispuesta a dedicar 30-45 minutos al día</li>
-                    <li>Prefieres tener un entrenador personal presencial</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTENIDO -->
-    <section class="fade-in">
-        <div class="container">
-            <div class="section-divider"></div>
-            <h2 class="section-title">Lo que incluye <em>tu guía</em></h2>
-            <p class="text-center text-muted" style="margin-bottom:20px;font-size:14px;">Más de 200 páginas de contenido profesional</p>
-            
-            <div class="chapter-list">
-                <div class="chapter">
-                    <div class="chapter-header" onclick="toggleChapter(this)">
-                        <h3><span class="chapter-num">1</span> Fundamentos del entrenamiento en casa</h3>
-                        <span class="chapter-arrow">▾</span>
-                    </div>
-                    <div class="chapter-body">
-                        Principios de la hipertrofia y fuerza aplicados al entrenamiento sin máquinas. Cómo progresar semana a semana usando tu propio cuerpo, bandas y mancuernas. Variables de entrenamiento: volumen, intensidad, frecuencia y selección de ejercicios.
-                        <div class="chapter-pages">~25 páginas</div>
-                    </div>
-                </div>
-                
-                <div class="chapter">
-                    <div class="chapter-header" onclick="toggleChapter(this)">
-                        <h3><span class="chapter-num">2</span> Tren inferior — Glúteos y piernas</h3>
-                        <span class="chapter-arrow">▾</span>
-                    </div>
-                    <div class="chapter-body">
-                        Los mejores ejercicios para glúteo mayor, medio y menor desde casa. Sentadillas, hip thrusts, zancadas, puentes y sus variaciones progresivas. Cada ejercicio con ilustración, técnica, errores comunes y series/repeticiones.
-                        <div class="chapter-pages">~40 páginas</div>
-                    </div>
-                </div>
-                
-                <div class="chapter">
-                    <div class="chapter-header" onclick="toggleChapter(this)">
-                        <h3><span class="chapter-num">3</span> Core y abdomen</h3>
-                        <span class="chapter-arrow">▾</span>
-                    </div>
-                    <div class="chapter-body">
-                        Rutinas completas para recto abdominal, oblicuos y transverso. Ejercicios anti-extensión, anti-rotación y anti-flexión lateral. Progresiones desde planchas básicas hasta variaciones avanzadas.
-                        <div class="chapter-pages">~30 páginas</div>
-                    </div>
-                </div>
-                
-                <div class="chapter">
-                    <div class="chapter-header" onclick="toggleChapter(this)">
-                        <h3><span class="chapter-num">4</span> Tren superior — Brazos, espalda y hombros</h3>
-                        <span class="chapter-arrow">▾</span>
-                    </div>
-                    <div class="chapter-body">
-                        Tonificación de brazos, espalda y hombros sin máquinas. Flexiones progresivas, remos con bandas/mancuernas, elevaciones laterales. Ejercicios para postura y prevención de dolor de espalda.
-                        <div class="chapter-pages">~30 páginas</div>
-                    </div>
-                </div>
-                
-                <div class="chapter">
-                    <div class="chapter-header" onclick="toggleChapter(this)">
-                        <h3><span class="chapter-num">5</span> Rutinas semanales completas</h3>
-                        <span class="chapter-arrow">▾</span>
-                    </div>
-                    <div class="chapter-body">
-                        Planes armados de 3, 4 y 5 días por semana según tu disponibilidad. Cada día detallado con ejercicios, series, repeticiones y descansos. Mesociclos de 4-8 semanas con progresión automática.
-                        <div class="chapter-pages">~40 páginas</div>
-                    </div>
-                </div>
-                
-                <div class="chapter">
-                    <div class="chapter-header" onclick="toggleChapter(this)">
-                        <h3><span class="chapter-num">6</span> Cardio y HIIT en casa</h3>
-                        <span class="chapter-arrow">▾</span>
-                    </div>
-                    <div class="chapter-body">
-                        Circuitos HIIT de 15-20 minutos para quemar grasa y mejorar resistencia cardiovascular. Combinaciones de fuerza y cardio. Rutinas express para los días que tienes poco tiempo.
-                        <div class="chapter-pages">~25 páginas</div>
-                    </div>
-                </div>
-                
-                <div class="chapter">
-                    <div class="chapter-header" onclick="toggleChapter(this)">
-                        <h3><span class="chapter-num">7</span> Estiramientos y movilidad</h3>
-                        <span class="chapter-arrow">▾</span>
-                    </div>
-                    <div class="chapter-body">
-                        Rutinas de calentamiento dinámico pre-entreno y enfriamiento post-entreno. Estiramientos para cadera, isquiotibiales, cuádriceps, espalda y hombros. Rutina de movilidad de 10 minutos para días de descanso.
-                        <div class="chapter-pages">~20 páginas</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA INTERMEDIO -->
-    <section class="text-center fade-in" style="padding:32px 0;">
-        <div class="container">
-            <a href="https://pay.hotmart.com/B104990340O?checkoutMode=10" class="cta-btn">
-                QUIERO EMPEZAR A ENTRENAR — $9 USD
-            </a>
-            <div class="cta-price">
-                <span class="old-price">$69 USD</span>
-                <span class="new-price">$9 USD</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- BONOS -->
-    <section class="bonos fade-in">
-        <div class="container">
-            <div class="section-divider"></div>
-            <h2 class="section-title">Además llevas <em>4 bonos gratis</em></h2>
-            <p class="text-center text-muted" style="font-size:14px;margin-top:-16px;margin-bottom:8px;">Valorados en más de $56 USD — Hoy incluidos sin costo</p>
-
-            <div class="bonos-grid">
-                <!-- BONO 1 -->
-                <div class="bono-card">
-                    <!-- REEMPLAZAR con URL mockup bono 1 -->
-                    <img src="BONO1_MOCKUP_URL" alt="Bono 1 — Recetas Fitness" onerror="this.style.background='#1a1a1a';this.alt='[Imagen]'">
-                    <div class="bono-info">
-                        <div class="bono-badge">Bono #1 — Gratis</div>
-                        <h3>Recetas Fit Express</h3>
-                        <p>50+ recetas rápidas y saludables con macros calculados. Desayunos, almuerzos, cenas y snacks para complementar tu entrenamiento.</p>
-                        <div class="bono-value">Valor: <span class="val">$19 USD</span> → <span class="free">GRATIS</span></div>
-                    </div>
-                </div>
-
-                <!-- BONO 2 -->
-                <div class="bono-card">
-                    <img src="BONO2_MOCKUP_URL" alt="Bono 2 — Guía de Glúteos" onerror="this.style.background='#1a1a1a';this.alt='[Imagen]'">
-                    <div class="bono-info">
-                        <div class="bono-badge">Bono #2 — Gratis</div>
-                        <h3>Glúteos en Casa: Protocolo Intensivo</h3>
-                        <p>Plan especializado de 4 semanas enfocado 100% en glúteos. Ejercicios de activación, fuerza e hipertrofia con progresión semanal.</p>
-                        <div class="bono-value">Valor: <span class="val">$15 USD</span> → <span class="free">GRATIS</span></div>
-                    </div>
-                </div>
-
-                <!-- BONO 3 -->
-                <div class="bono-card">
-                    <img src="BONO3_MOCKUP_URL" alt="Bono 3 — Cardio HIIT" onerror="this.style.background='#1a1a1a';this.alt='[Imagen]'">
-                    <div class="bono-info">
-                        <div class="bono-badge">Bono #3 — Gratis</div>
-                        <h3>Cardio HIIT: 30 Rutinas Quema Grasa</h3>
-                        <p>Circuitos de alta intensidad de 15-25 minutos. Diseñados para acelerar el metabolismo y complementar tus días de fuerza.</p>
-                        <div class="bono-value">Valor: <span class="val">$12 USD</span> → <span class="free">GRATIS</span></div>
-                    </div>
-                </div>
-
-                <!-- BONO 4 -->
-                <div class="bono-card">
-                    <img src="BONO4_MOCKUP_URL" alt="Bono 4 — Guía de Estiramientos" onerror="this.style.background='#1a1a1a';this.alt='[Imagen]'">
-                    <div class="bono-info">
-                        <div class="bono-badge">Bono #4 — Gratis</div>
-                        <h3>Flexibilidad y Recuperación</h3>
-                        <p>Rutinas de yoga, estiramientos y movilidad para descanso activo. Reduce dolores, mejora postura y acelera tu recuperación.</p>
-                        <div class="bono-value">Valor: <span class="val">$10 USD</span> → <span class="free">GRATIS</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRICING -->
-    <section class="pricing fade-in">
-        <div class="container">
-            <div class="section-divider"></div>
-            <h2 class="section-title">Todo esto por <em>un precio increíble</em></h2>
-
-            <div class="pricing-card">
-                <div class="pricing-ribbon">🔥 Oferta de lanzamiento</div>
-                
-                <ul class="pricing-includes">
-                    <li>Entrenamiento en Casa para Mujeres (200+ págs) <span class="pages">PRINCIPAL</span></li>
-                    <li>Recetas Fit Express <span class="pages">BONO</span></li>
-                    <li>Glúteos en Casa: Protocolo Intensivo <span class="pages">BONO</span></li>
-                    <li>Cardio HIIT: 30 Rutinas Quema Grasa <span class="pages">BONO</span></li>
-                    <li>Flexibilidad y Recuperación <span class="pages">BONO</span></li>
-                </ul>
-
-                <div class="pricing-total">Valor total del pack:</div>
-                <div class="pricing-old">$69 USD</div>
-                <div class="pricing-arrow">↓</div>
-                <div class="pricing-new"><span class="currency">USD </span>$9</div>
-                <div class="pricing-note">Pago único · Acceso de por vida · Descarga inmediata</div>
-                
-                <a href="https://pay.hotmart.com/B104990340O?checkoutMode=10" class="cta-btn" style="max-width:100%;">
-                    SÍ, QUIERO EL PACK COMPLETO — $9 USD
-                </a>
-                <div class="cta-guarantee" style="margin-top:12px;">Compra protegida · Garantía de 7 días · Pago seguro con Hotmart</div>
-            </div>
-
-            <!-- GARANTIA -->
-            <div class="garantia-box">
-                <h3>🛡️ Garantía de 7 días</h3>
-                <p>Si por cualquier motivo no estás conforme con el producto, tienes 7 días para solicitar un reembolso completo. Sin preguntas, sin complicaciones. El riesgo es nuestro, no tuyo.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="fade-in">
-        <div class="container">
-            <div class="section-divider"></div>
-            <h2 class="section-title">Preguntas <em>frecuentes</em></h2>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    ¿Necesito equipamiento para estas rutinas?
-                    <span class="arrow">▾</span>
-                </div>
-                <div class="faq-answer">La mayoría de ejercicios se pueden hacer solo con tu peso corporal. Para progresar más rápido, recomendamos tener bandas elásticas y un par de mancuernas, pero no son obligatorias. La guía incluye variaciones con y sin equipamiento.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    ¿Sirve si soy principiante?
-                    <span class="arrow">▾</span>
-                </div>
-                <div class="faq-answer">Sí. La guía incluye rutinas desde nivel principiante hasta avanzado, con progresiones claras. Cada ejercicio está explicado paso a paso con ilustraciones y errores comunes a evitar.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    ¿Cómo recibo el producto?
-                    <span class="arrow">▾</span>
-                </div>
-                <div class="faq-answer">Inmediatamente después de tu compra recibes un email con el acceso a la descarga de los 5 ebooks en formato PDF. También puedes acceder desde tu cuenta de Hotmart en cualquier momento.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    ¿Cuánto tiempo duran las rutinas?
-                    <span class="arrow">▾</span>
-                </div>
-                <div class="faq-answer">Entre 30 y 45 minutos por sesión, dependiendo del plan que elijas (3, 4 o 5 días por semana). Las rutinas HIIT son de 15-25 minutos para los días que tienes poco tiempo.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    ¿Puedo pagar con tarjeta de crédito/débito?
-                    <span class="arrow">▾</span>
-                </div>
-                <div class="faq-answer">Sí. Hotmart acepta tarjetas de crédito, débito, PayPal y otros métodos de pago locales según tu país. El proceso es 100% seguro y encriptado.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    ¿Tienen garantía?
-                    <span class="arrow">▾</span>
-                </div>
-                <div class="faq-answer">Sí, tienes una garantía de 7 días. Si no estás satisfecha con el producto, solicitas tu reembolso y te devolvemos el 100% de tu dinero sin hacer preguntas.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    ¿Es solo para mujeres?
-                    <span class="arrow">▾</span>
-                </div>
-                <div class="faq-answer">La guía está diseñada específicamente para mujeres, con enfoque en áreas como glúteos, abdomen y tonificación. Los ejercicios y progresiones están adaptados a las necesidades femeninas, aunque los principios de entrenamiento son universales.</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="final-cta fade-in">
-        <div class="container">
-            <h2>Tu cuerpo no va a cambiar <span class="text-primary">mirando rutinas en Instagram.</span></h2>
-            <p>Necesitas un plan real, con progresión, con ciencia. <strong>Y hoy lo puedes tener por solo $9 USD.</strong></p>
-            
-            <!-- MOCKUP PACK COMPLETO -->
-            <!-- REEMPLAZAR con URL pack_completo_casa_usd.png -->
-            <img src="PACK_COMPLETO_URL" alt="Pack Completo — 5 Ebooks" style="max-width:380px;width:100%;margin:0 auto 24px;display:block;" onerror="this.style.display='none'">
-            
-            <a href="https://pay.hotmart.com/B104990340O?checkoutMode=10" class="cta-btn">
-                QUIERO TRANSFORMAR MI CUERPO — $9 USD
-            </a>
-            <div class="cta-price">
-                <span class="old-price">$69 USD</span>
-                <span class="new-price">$9 USD</span> — Últimas unidades a este precio
-            </div>
-            <div class="cta-guarantee" style="margin-top:8px;">Acceso inmediato · Garantía 7 días · Pago seguro</div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <p>
-                © 2026 Músculo Lab — Todos los derechos reservados<br>
-                <a href="https://musculolab.lat">musculolab.lat</a> · <a href="https://instagram.com/musculo.lab" target="_blank">@musculo.lab</a><br>
-                <a href="https://musculolab.lat/pages/politica-de-privacidad" target="_blank">Política de Privacidad</a> · <a href="https://musculolab.lat/pages/terminos-de-servicio" target="_blank">Términos de Servicio</a>
-            </p>
-        </div>
-    </footer>
-
-    <!-- FLOATING CTA (MOBILE) -->
-    <div class="floating-cta" id="floatingCta">
-        <a href="https://pay.hotmart.com/B104990340O?checkoutMode=10" class="cta-btn">
-            OBTENER AHORA — $9 USD
-        </a>
+<section class="section">
+  <div class="container">
+    <div class="section-label">EL PROBLEMA QUE NADIE TE DICE</div>
+    <h2 class="section-title">Querés entrenar pero <span>no sabés por dónde empezar</span>. Y eso te frena.</h2>
+    <div class="accent-line"></div>
+    <div class="problem-grid">
+      <div class="problem-card"><div class="icon">🤷</div><h3>Probás rutinas de reels y no pasa nada</h3><p>Un día hacés sentadillas, otro un video de YouTube, otro nada. Sin plan ni progresión real, tu cuerpo no cambia. Y te frustrás.</p></div>
+      <div class="problem-card"><div class="icon">🏠</div><h3>No podés (o no querés) ir al gym</h3><p>Por plata, por tiempo, por vergüenza o porque simplemente preferís entrenar en casa. Pero no sabés cómo hacerlo bien sin máquinas.</p></div>
+      <div class="problem-card"><div class="icon">😤</div><h3>Sentís que no avanzás</h3><p>Llevás semanas o meses "entrenando" pero tu cuerpo sigue igual. No tenés un sistema, no medís nada, y perdés la motivación.</p></div>
     </div>
+  </div>
+</section>
 
-    <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/5491164513871?text=Hola!%20Quiero%20consultar%20sobre%20Entrenamiento%20en%20Casa%20para%20Mujeres" class="whatsapp-float" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </a>
+<div class="divider"></div>
 
-    <script>
-    // ========== TIMER ==========
-    (function() {
-        // 2 hours countdown, resets from localStorage
-        const DURATION = 2 * 60 * 60 * 1000;
-        const KEY = 'ml_casa_timer_end';
-        let end = localStorage.getItem(KEY);
-        if (!end || parseInt(end) < Date.now()) {
-            end = Date.now() + DURATION;
-            localStorage.setItem(KEY, end);
-        } else {
-            end = parseInt(end);
-        }
+<section class="section">
+  <div class="container">
+    <div class="section-label">LA SOLUCIÓN</div>
+    <h2 class="section-title">El sistema completo para <span>transformar tu cuerpo desde tu casa</span></h2>
+    <div class="accent-line"></div>
+    <div class="benefits-grid">
+      <div class="benefit-item"><div class="benefit-icon">🏠</div><div class="benefit-text"><h3>Sin gym, sin excusas</h3><p>Todo con peso corporal + bandas elásticas. No necesitás equipamiento caro ni salir de tu casa. Entrenás cuando vos quieras.</p></div></div>
+      <div class="benefit-item"><div class="benefit-icon">📋</div><div class="benefit-text"><h3>3 niveles con rutinas armadas</h3><p>Principiante, intermedia y avanzada. Cada nivel con rutina de 8 semanas completa. Elegís tu nivel y arrancás hoy.</p></div></div>
+      <div class="benefit-item"><div class="benefit-icon">🍽️</div><div class="benefit-text"><h3>Nutrición simple que funciona</h3><p>Qué comer para ver resultados sin dietas locas. Plan de 21 días incluido como bono para que no tengas que pensar.</p></div></div>
+      <div class="benefit-item"><div class="benefit-icon">🍑</div><div class="benefit-text"><h3>Capítulos especiales de glúteos</h3><p>Glúteos, abdomen, cardio y rutinas express de 15 minutos. Todo pensado para lo que más le importa a una mujer.</p></div></div>
+    </div>
+  </div>
+</section>
 
-        function updateTimer() {
-            let diff = end - Date.now();
-            if (diff <= 0) {
-                end = Date.now() + DURATION;
-                localStorage.setItem(KEY, end);
-                diff = DURATION;
-            }
-            const h = Math.floor(diff / 3600000);
-            const m = Math.floor((diff % 3600000) / 60000);
-            const s = Math.floor((diff % 60000) / 1000);
-            document.getElementById('timer-h').textContent = String(h).padStart(2, '0');
-            document.getElementById('timer-m').textContent = String(m).padStart(2, '0');
-            document.getElementById('timer-s').textContent = String(s).padStart(2, '0');
-        }
-        updateTimer();
-        setInterval(updateTimer, 1000);
-    })();
+<div class="divider"></div>
 
-    // ========== CHAPTERS ==========
-    function toggleChapter(el) {
-        el.parentElement.classList.toggle('open');
-    }
+<section class="section">
+  <div class="container">
+    <div class="section-label">MIRÁ TODO LO QUE HAY ADENTRO</div>
+    <h2 class="section-title">200 páginas. <span>Cero relleno.</span> Solo lo que necesitás.</h2>
+    <p class="section-subtitle">Desde lo más básico hasta avanzado. Arrancás de cero y en 24 semanas tenés un cuerpo nuevo.</p>
+    <div class="accent-line"></div>
+    <div class="content-grid">
+      <div class="content-item"><div class="content-header" onclick="this.parentElement.classList.toggle('active')"><div class="content-header-left"><span class="chapter">CAP 1</span><div class="content-header-text"><h3>Tu Cuerpo Puede Cambiar</h3><p>Fundamentos que necesitás entender</p></div></div><span class="content-toggle">+</span></div><div class="content-body"><div class="content-body-inner"><ul><li>Cómo funciona el cambio físico</li><li>Por qué entrenar en casa SÍ funciona</li><li>Qué esperar el primer mes</li><li>Mitos del entrenamiento femenino</li></ul></div></div></div>
+      <div class="content-item"><div class="content-header" onclick="this.parentElement.classList.toggle('active')"><div class="content-header-left"><span class="chapter">CAP 2</span><div class="content-header-text"><h3>Tu Gym en Casa</h3><p>Equipamiento mínimo que necesitás</p></div></div><span class="content-toggle">+</span></div><div class="content-body"><div class="content-body-inner"><ul><li>Mat, bandas y nada más</li><li>Cómo armar tu espacio</li><li>Alternativas sin nada de equipamiento</li></ul></div></div></div>
+      <div class="content-item"><div class="content-header" onclick="this.parentElement.classList.toggle('active')"><div class="content-header-left"><span class="chapter">CAP 3</span><div class="content-header-text"><h3>Nutrición Simple y Efectiva</h3><p>Comé bien sin volverte loca</p></div></div><span class="content-toggle">+</span></div><div class="content-body"><div class="content-body-inner"><ul><li>Macros simplificados para mujeres</li><li>Método del plato (sin contar calorías)</li><li>Qué comer antes y después de entrenar</li><li>Hidratación y descanso</li></ul></div></div></div>
+      <div class="content-item"><div class="content-header" onclick="this.parentElement.classList.toggle('active')"><div class="content-header-left"><span class="chapter">CAP 4</span><div class="content-header-text"><h3>Calentamiento Correcto</h3><p>Activación antes de cada rutina</p></div></div><span class="content-toggle">+</span></div><div class="content-body"><div class="content-body-inner"><ul><li>Rutina de calentamiento completa</li><li>Activación muscular</li><li>Movilidad articular</li></ul></div></div></div>
+      <div class="content-item"><div class="content-header" onclick="this.parentElement.classList.toggle('active')"><div class="content-header-left"><span class="chapter">CAP 5</span><div class="content-header-text"><h3>Rutina Principiante — 8 Semanas</h3><p>Para arrancar de cero sin lesionarte</p></div></div><span class="count">8 sem</span><span class="content-toggle">+</span></div><div class="content-body"><div class="content-body-inner"><ul><li>3 días por semana</li><li>Ejercicios básicos con peso corporal</li><li>Progresión semana a semana</li><li>Videos de referencia para cada ejercicio</li></ul></div></div></div>
+      <div class="content-item"><div class="content-header" onclick="this.parentElement.classList.toggle('active')"><div class="content-header-left"><span class="chapter">CAP 6</span><div class="content-header-text"><h3>Rutina Intermedia — 8 Semanas</h3><p>Para las que ya tienen base</p></div></div><span class="count">8 sem</span><span class="content-toggle">+</span></div><div class="content-body"><div class="content-body-inner"><ul><li>4 días por semana</li><li>Incorpora bandas elásticas</li><li>Mayor volumen e intensidad</li><li>Supersets y circuitos</li></ul></div></div></div>
+      <div class="content-item"><div class="content-header" onclick="this.parentElement.classList.toggle('active')"><div class="content-header-left"><span class="chapter">CAP 7</span><div class="content-header-text"><h3>Rutina Avanzada — 8 Semanas</h3><p>5 días por semana incluye día de glúteos</p></div></div><span class="count">8 sem</span><span class="content-toggle">+</span></div><div class="content-body"><div class="content-body-inner"><ul><li>5 días por semana</li><li>Día especial de glúteos</li><li>Alta intensidad con bandas</li><li>Técnicas avanzadas</li></ul></div></div></div>
+      <div class="content-item"><div class="content-header" onclick="this.parentElement.classList.toggle('active')"><div class="content-header-left"><span class="chapter">CAP 8-12</span><div class="content-header-text"><h3>Glúteos, Abdomen, Express, Cardio y Tracking</h3><p>Capítulos especiales extra</p></div></div><span class="count">70 págs</span><span class="content-toggle">+</span></div><div class="content-body"><div class="content-body-inner"><ul><li>Glúteos Especial: rutinas enfocadas</li><li>Abdomen y Cintura: core completo</li><li>Rutinas Express de 15 minutos</li><li>Cardio en Casa sin salir</li><li>Tracking, mediciones y progreso</li></ul></div></div></div>
+    </div>
+  </div>
+</section>
 
-    // ========== FAQ ==========
-    function toggleFaq(el) {
-        el.parentElement.classList.toggle('open');
-    }
+<div class="divider"></div>
 
-    // ========== FLOATING CTA ==========
-    (function() {
-        const floating = document.getElementById('floatingCta');
-        const hero = document.querySelector('.hero');
-        function checkFloat() {
-            if (!floating) return;
-            const heroBottom = hero.getBoundingClientRect().bottom;
-            if (heroBottom < 0) {
-                floating.style.display = 'block';
-            } else {
-                floating.style.display = 'none';
-            }
-        }
-        // Only on mobile
-        if (window.innerWidth <= 640) {
-            window.addEventListener('scroll', checkFloat, { passive: true });
-            checkFloat();
-        }
-    })();
+<section class="section">
+  <div class="container">
+    <div class="section-label">ESPERÁ, HAY MÁS</div>
+    <h2 class="section-title">Te sumamos <span>4 bonos gratis</span> para que no te falte nada</h2>
+    <p class="section-subtitle">Cada uno se vende por separado. Hoy te los llevás sin pagar un peso extra.</p>
+    <div class="accent-line"></div>
+    <div class="bonus-card"><div><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_v5_bandas.png?v=1773808085" alt="Bandas Elásticas" style="width:100%;height:auto;border-radius:8px;"></div><div><span class="bonus-tag">BONO 1 — GRATIS</span><h3 class="bonus-title">Entrenamiento con Bandas Elásticas</h3><p class="bonus-desc">30 páginas con rutina completa de 8 semanas usando bandas elásticas. Potenciá cada ejercicio con resistencia real. Incluye glúteos, piernas y tren superior.</p><div class="bonus-price"><span class="old">$9 USD</span><span class="free">GRATIS</span></div></div></div>
+    <div class="bonus-card"><div><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_v5_comidas.png?v=1773808093" alt="Plan 21 Días de Comidas" style="width:100%;height:auto;border-radius:8px;"></div><div><span class="bonus-tag">BONO 2 — GRATIS</span><h3 class="bonus-title">Plan de 21 Días de Comidas</h3><p class="bonus-desc">27 páginas con desayuno, almuerzo, cena y snacks para 3 semanas completas. Comidas simples, ricas y con los macros que necesitás para ver resultados.</p><div class="bonus-price"><span class="old">$9 USD</span><span class="free">GRATIS</span></div></div></div>
+    <div class="bonus-card"><div><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_v5_celulitis.png?v=1773808100" alt="Anti-Celulitis" style="width:100%;height:auto;border-radius:8px;"></div><div><span class="bonus-tag">BONO 3 — GRATIS</span><h3 class="bonus-title">Guía Anti-Celulitis y Flacidez</h3><p class="bonus-desc">24 páginas con rutinas específicas, nutrición, masajes y hábitos para reducir la celulitis y mejorar la firmeza de tu piel. La guía definitiva.</p><div class="bonus-price"><span class="old">$7 USD</span><span class="free">GRATIS</span></div></div></div>
+    <div class="bonus-card"><div><img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_v5_calendario.png?v=1773808108" alt="Calendario y Planillas" style="width:100%;height:auto;border-radius:8px;"></div><div><span class="bonus-tag">BONO 4 — GRATIS</span><h3 class="bonus-title">Calendario y Planillas de Tracking</h3><p class="bonus-desc">25 páginas con calendario de entrenamiento, planillas de seguimiento, medidas corporales y gráficos de progreso. Organizá todo y medí tus resultados.</p><div class="bonus-price"><span class="old">$7 USD</span><span class="free">GRATIS</span></div></div></div>
+  </div>
+</section>
 
-    // ========== FADE IN ==========
-    (function() {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    })();
-    </script>
+<div class="divider"></div>
 
+<section class="section">
+  <div class="container">
+    <div class="section-label">ESTO ES PARA VOS SI...</div>
+    <h2 class="section-title">Marcá todo lo que <span>te pasa</span></h2>
+    <div class="accent-line"></div>
+    <div class="target-list">
+      <div class="target-item"><div class="target-check">✓</div><div class="target-text">Querés entrenar pero no podés o no querés ir al gym</div></div>
+      <div class="target-item"><div class="target-check">✓</div><div class="target-text">Probaste rutinas de YouTube o Instagram y no viste resultados</div></div>
+      <div class="target-item"><div class="target-check">✓</div><div class="target-text">Te frustra no saber si estás haciendo los ejercicios bien</div></div>
+      <div class="target-item"><div class="target-check">✓</div><div class="target-text">Querés tonificar glúteos, abdomen y piernas desde tu casa</div></div>
+      <div class="target-item"><div class="target-check">✓</div><div class="target-text">Necesitás un plan real que te diga exactamente qué hacer cada día</div></div>
+    </div>
+    <p style="text-align:center;color:var(--accent);font-family:'Oswald',sans-serif;font-weight:600;font-size:20px;margin-top:32px;">Si marcaste aunque sea una, este ebook te va a cambiar.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section pricing-section" id="precio">
+  <div class="container">
+    <div class="section-label">HACÉ LAS CUENTAS</div>
+    <h2 class="section-title">Un entrenador personal cobra <span>$80 USD/mes</span>. Esto cuesta menos que una clase.</h2>
+    <div class="accent-line"></div>
+    <div style="max-width:600px;margin:0 auto 32px;filter:drop-shadow(0 20px 60px rgba(192,75,109,0.15));">
+      <!-- REEMPLAZAR: imagen pack completo -->
+      <img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/casa_orig_pack.jpg?v=1773806711" alt="Pack Completo - Entrenamiento en Casa + 4 Bonos" style="width:100%;height:auto;border-radius:12px;">
+    </div>
+    <div class="pricing-box">
+      <div class="pricing-header"><h3>TU PACK INCLUYE — TODO ESTO</h3></div>
+      <div class="pricing-body">
+        <div class="pricing-items">
+          <div class="pricing-item"><span class="name"><span class="check">✓</span> Entrenamiento en Casa para Mujeres (200 págs) <span class="tag tag-principal">PRINCIPAL</span></span><span class="value">$29 USD</span></div>
+          <div class="pricing-item"><span class="name"><span class="check">✓</span> Bandas Elásticas (30 págs) <span class="tag tag-bono">BONO 1</span></span><span class="value-free">GRATIS</span></div>
+          <div class="pricing-item"><span class="name"><span class="check">✓</span> Plan 21 Días de Comidas (27 págs) <span class="tag tag-bono">BONO 2</span></span><span class="value-free">GRATIS</span></div>
+          <div class="pricing-item"><span class="name"><span class="check">✓</span> Anti-Celulitis y Flacidez (24 págs) <span class="tag tag-bono">BONO 3</span></span><span class="value-free">GRATIS</span></div>
+          <div class="pricing-item"><span class="name"><span class="check">✓</span> Calendario y Planillas (25 págs) <span class="tag tag-bono">BONO 4</span></span><span class="value-free">GRATIS</span></div>
+        </div>
+        <div class="pricing-total"><span class="label">VALOR TOTAL</span><span class="old-total">$69 USD</span></div>
+        <div class="pricing-savings"><span class="label">Tu ahorro hoy</span><span class="amount">-$60 USD (87% OFF)</span></div>
+        <div class="pricing-now"><div class="label">HOY PAGÁS</div><div class="price"><span class="currency">USD </span>$9</div></div>
+        <a href="https://pay.hotmart.com/B104990340O?checkoutMode=10" class="cta-btn" onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')" style="width:100%;text-align:center;">QUIERO EMPEZAR AHORA</a>
+        <div class="pricing-guarantee"><div class="guarantee-badge">🛡️</div><div class="guarantee-text"><strong>Garantía total de 7 días</strong>Si no te sirve, te devolvemos toda tu plata sin preguntas. Cero riesgo para vos.</div></div>
+        <div class="pricing-trust"><span><em>🔒</em> Pago seguro</span><span><em>⚡</em> Acceso inmediato</span><span><em>📄</em> PDF de alta calidad</span><span><em>♾️</em> Acceso de por vida</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-label">PREGUNTAS FRECUENTES</div>
+    <h2 class="section-title">¿Tenés <span>dudas</span>?</h2>
+    <div class="accent-line"></div>
+    <div style="max-width:700px;margin:0 auto;">
+      <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')">¿Cuándo recibo el material?<span class="toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Inmediatamente después de que se acredite el pago. Con tarjeta es instantáneo. Con transferencia puede demorar hasta 24 horas hábiles. Te llega todo por mail para descargar.</div></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')">¿Necesito equipamiento?<span class="toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Solo un mat (opcional) y bandas elásticas (que cuestan menos de $5.000). La mayoría de ejercicios se hacen solo con peso corporal. No necesitás máquinas, pesas ni nada caro.</div></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')">¿Sirve si soy principiante total?<span class="toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Sí, está pensado exactamente para eso. El nivel principiante arranca de cero absoluto. Cada ejercicio tiene explicación paso a paso. No necesitás experiencia previa.</div></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')">¿Cuánto tiempo lleva cada rutina?<span class="toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Las rutinas principales duran entre 30 y 45 minutos. Además tenés rutinas express de 15 minutos para los días que andás corta de tiempo.</div></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')">¿En qué formato viene?<span class="toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Son 5 PDFs de alta calidad (el ebook principal + 4 bonos separados). Se ven perfecto en celular, tablet y computadora. Los descargás y son tuyos para siempre.</div></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')">¿Qué pasa si no me gusta?<span class="toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Tenés 7 días de garantía total. Si por cualquier motivo no te sirve, te devolvemos el 100% de tu plata sin preguntas. Literalmente cero riesgo.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+    <img src="https://cdn.shopify.com/s/files/1/0803/0509/4885/files/cbdad874-1cd7-4917-9d0c-869cca151e22_2.png?v=1771031902" alt="Músculo Lab" style="width:72px;height:72px;margin:0 auto 20px;display:block;border-radius:50%;border:2px solid var(--border);">
+    <div class="section-label">SOBRE NOSOTROS</div>
+    <h2 class="section-title"><span>MÚSCULO LAB</span></h2>
+    <div class="accent-line"></div>
+    <div class="about-box">
+      <p>Somos un equipo argentino que se cansó de ver minas entrenando sin plan, siguiendo rutinas random de Instagram y frustrándose porque no ven cambios. Creamos material digital que va directo al grano: qué hacer, cómo hacerlo y por qué.</p>
+      <p>Sin humo. Sin dietas imposibles. Sin gurús de Instagram. Solo información que funciona, explicada simple.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom:100px;">
+  <div class="container" style="text-align:center;">
+    <h2 class="section-title">Tenés dos opciones:<br>Seguir improvisando y sin resultados.<br>O <span>invertir $9 USD y entrenar con un sistema real</span>.</h2>
+    <p style="color:#ddd;margin-bottom:32px;font-size:16px;">200 páginas + 4 bonos + acceso de por vida. Si en 7 días no te sirve, te devolvemos cada centavo.</p>
+    <a href="https://pay.hotmart.com/B104990340O?checkoutMode=10" class="cta-btn">QUIERO EMPEZAR AHORA — $9 USD</a>
+    <span class="cta-sub"><span class="secure">🔒</span> Pago seguro con Hotmart · Acceso inmediato</span>
+  </div>
+</section>
+
+<footer>
+  <p>MÚSCULO LAB — TODOS LOS DERECHOS RESERVADOS — 2026</p>
+  <p style="margin-top:8px;"><a href="#">Política de Privacidad</a> · <a href="#">Términos y Condiciones</a> · <a href="#">Contacto</a></p>
+</footer>
+
+<a href="https://wa.me/5491164513871?text=Hola!%20Estoy%20viendo%20la%20gu%C3%ADa%20de%20Entrenamiento%20en%20Casa%20para%20Mujeres%20y%20tengo%20una%20consulta%20%F0%9F%92%AA" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <span class="wa-label">¿Dudas? Hablanos</span>
+  <span class="wa-icon"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></span>
+</a>
+
+<div class="floating-cta"><a href="https://pay.hotmart.com/B104990340O?checkoutMode=10" class="cta-btn" style="width:100%;">QUIERO EMPEZAR AHORA — $9 USD</a></div>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  (function(){var el=document.getElementById("countdown");if(!el)return;function tick(){var now=new Date();var utc=now.getTime()+now.getTimezoneOffset()*60000;var ar=new Date(utc-3*3600000);var msLeft=((23-ar.getHours())*3600+(59-ar.getMinutes())*60+(59-ar.getSeconds()))*1000;var h=Math.floor(msLeft/3600000);var m=Math.floor((msLeft%3600000)/60000);var s=Math.floor((msLeft%60000)/1000);el.textContent=(h<10?"0":"")+h+":"+(m<10?"0":"")+m+":"+(s<10?"0":"")+s;}tick();setInterval(tick,1000);})();
+  function initSnapCarousel(viewportId,dotsId,autoMs){
+    var vp=document.getElementById(viewportId);if(!vp)return{next:function(){},prev:function(){}};
+    var slides=vp.querySelectorAll(".carousel-slide");var total=slides.length;var current=0;var autoTimer;
+    var dotsEl=document.getElementById(dotsId);
+    if(dotsEl){for(var i=0;i<total;i++){(function(idx){var dot=document.createElement("button");dot.className="carousel-dot"+(idx===0?" active":"");dot.onclick=function(){goTo(idx);};dotsEl.appendChild(dot);})(i);}}
+    function goTo(idx){current=((idx%total)+total)%total;vp.scrollTo({left:current*vp.offsetWidth,behavior:"smooth"});updateDots();resetAuto();}
+    function updateDots(){if(!dotsEl)return;var dots=dotsEl.querySelectorAll(".carousel-dot");for(var j=0;j<dots.length;j++){if(j===current){dots[j].classList.add("active");}else{dots[j].classList.remove("active");}}}
+    var scrollTimeout;vp.addEventListener("scroll",function(){clearTimeout(scrollTimeout);scrollTimeout=setTimeout(function(){var w=vp.offsetWidth;if(w>0){current=Math.round(vp.scrollLeft/w);updateDots();}},100);});
+    function resetAuto(){if(!autoMs)return;clearInterval(autoTimer);autoTimer=setInterval(function(){goTo(current+1);},autoMs);}if(autoMs)resetAuto();
+    vp.addEventListener("touchstart",function(){clearInterval(autoTimer);});vp.addEventListener("touchend",function(){if(autoMs)resetAuto();});
+    return{goTo:goTo,next:function(){goTo(current+1);},prev:function(){goTo(current-1);}};
+  }
+  var ebookC=initSnapCarousel("ebookViewport","ebookDots",6000);
+  window._ebookC=ebookC;
+  (function(){var waBtn=document.querySelector(".whatsapp-float");var trigger=document.getElementById("precio");if(!waBtn||!trigger)return;var shown=false;function checkScroll(){var rect=trigger.getBoundingClientRect();if(rect.top<window.innerHeight*0.8){if(!shown){waBtn.classList.add("visible");shown=true;}}}window.addEventListener("scroll",checkScroll,{passive:true});checkScroll();})();
+});
+function ebookCarousel(dir){if(window._ebookC){if(dir>0)window._ebookC.next();else window._ebookC.prev();}}
+</script>
 </body>
 </html>
